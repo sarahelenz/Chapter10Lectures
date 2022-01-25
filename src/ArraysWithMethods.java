@@ -1,8 +1,13 @@
+import javax.swing.*;
+
 public class ArraysWithMethods {
     public static void main(String[] args) {
        // int array[] = new int[2]; array[0] = 5; array[1] = 7;
         int array[] = {5, 7};
         method(array);
+        int[] y = createRandomArray();
+        printArray(y);
+        System.out.println(checkArray(y));
     }
 
     public static void method(int a[]){
@@ -10,12 +15,31 @@ public class ArraysWithMethods {
         for(int x = 0; x < a.length; x++) {
             a[x] += 2;
         }
+    }
+    public static int[] createRandomArray(){
+        int array[] = new int[10];
+        for(int x = 0; x < array.length; x++){
+            array[x] = (int)(Math.random() * 100) + 1;
+        }
+        return array;
+    }
+    public static boolean checkArray(int[] i){
+      int check = Integer.parseInt(JOptionPane.showInputDialog(null, "What number do you want to check for?"));
+        for(int x = 0; x < i.length; x++){
+            if(i[x] == check){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void printArray(int[] x){
+
         //Printing whole array
         System.out.print("{");
 
-        for(int x = 0; x < a.length; x++){
-            System.out.print(" " + a[x]);
-            if(x < a.length - 1){
+        for(int y = 0; y < x.length; y++){
+            System.out.print(" " + x[y]);
+            if(y < x.length - 1){
                 System.out.print(" |");
             }
 
