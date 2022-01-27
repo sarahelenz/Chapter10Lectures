@@ -14,13 +14,13 @@ public class ArrayAlgorithms {
         return count;
     }
 
-    public static int findMax(int[] x){
-       int startingValue = 0;
-
-        for(int i = 0; i < x.length; i++) {
-           int currentValue = x[i];
-        }
-    }
+//    public static int findMax(int[] x){
+//       int startingValue = 0;
+//
+//        for(int i = 0; i < x.length; i++) {
+//           int currentValue = x[i];
+//        }
+//    }
 
     public static int[] createRandomArray(){
         int array[] = new int[10];

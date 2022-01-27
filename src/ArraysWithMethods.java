@@ -8,11 +8,9 @@ public class ArraysWithMethods {
         int[] y = createRandomArray();
         printArray(y);
         System.out.println(checkArray(y));
-       int index = y.length - 1;
-        for(int x = 0; x < array.length; x++){
-            int save = y[index];
+        reverseArray(y);
+        printArray(y);
 
-        }
     }
 
     public static void method(int a[]){
@@ -51,5 +49,15 @@ public class ArraysWithMethods {
 
         }
         System.out.println(" }");
+    }
+    public static void reverseArray(int[] a){
+        int index = a.length - 1;
+        for(int x = 0; x < a.length; x++){
+            int save = a[index];
+            save = a[x];
+            a[index] = a[x];
+            index -= 1;
+
+        }
     }
 }
