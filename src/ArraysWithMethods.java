@@ -8,6 +8,11 @@ public class ArraysWithMethods {
         int[] y = createRandomArray();
         printArray(y);
         System.out.println(checkArray(y));
+       int index = y.length - 1;
+        for(int x = 0; x < array.length; x++){
+            int save = y[index];
+
+        }
     }
 
     public static void method(int a[]){
@@ -32,6 +37,7 @@ public class ArraysWithMethods {
         }
         return false;
     }
+
     public static void printArray(int[] x){
 
         //Printing whole array
