@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ArrayListWithLoops {
     public static void main(String[] args) {
-        Integer[] array = {1, 2, 3, 4, 5};
+        Integer[] array = {1, 3, 3, 1, 5};
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
 
         for(int x  = 0; x < array.length; x++){
@@ -15,5 +15,14 @@ public class ArrayListWithLoops {
         }
         System.out.println(total);
         System.out.println(arrayList);
+        System.out.println(ifAnyEven(arrayList));
+    }
+    public static String ifAnyEven(ArrayList<Integer> a){
+        for(int x = 0; x < a.size(); x++){
+            if(a.get(x) % 2 == 0){
+                return "Even";
+            }
+        }
+        return "Odd";
     }
 }
