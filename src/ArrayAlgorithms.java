@@ -1,8 +1,9 @@
 public class ArrayAlgorithms {
     public static void main(String[] args) {
         int[] array = createRandomArray();
+        sortArray(array);
         printArray(array);
-        System.out.println(amountOverTen(array));
+
     }
     public static int amountOverTen(int[] x){
         int count = 0;
@@ -14,13 +15,16 @@ public class ArrayAlgorithms {
         return count;
     }
 
-//    public static int findMax(int[] x){
-//       int startingValue = 0;
-//
-//        for(int i = 0; i < x.length; i++) {
-//           int currentValue = x[i];
-//        }
-//    }
+    public static int findMax(int[] x){
+       int index = 0;
+        int max = x[index];
+        for(int i = 0; i < x.length; i++) {
+            if(max < x[i]){
+                max = x[i];
+            }
+        }
+        return max;
+    }
 
     public static int[] createRandomArray(){
         int array[] = new int[10];
@@ -41,5 +45,18 @@ public class ArrayAlgorithms {
 
         }
         System.out.println(" }");
+    }
+
+    public static void sortArray(int[] array){
+        int temp;
+        for(int x = 0; x < array.length; x++){
+            for (int y = 0; y < array.length - 1; y++){
+                if(array[y] > array[y + 1]) {
+                    temp = array[y + 1];
+                    array[y + 1] = array[y];
+                    array[y] = temp;
+                }
+            }
+        }
     }
 }
