@@ -46,7 +46,7 @@ public class ArrayAlgorithms {
         }
         System.out.println(" }");
     }
-
+        //considered a n^2 array since it has two for loops with two arrays
     public static void sortArray(int[] array){
         int temp;
         for(int x = 0; x < array.length; x++){
