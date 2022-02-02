@@ -52,8 +52,8 @@ public class ArraysWithMethods {
     }
     public static void reverseArray(int[] a){
         int index = a.length - 1;
+        int save = a[index];
         for(int x = 0; x < a.length; x++){
-            int save = a[index];
             save = a[x];
             a[index] = a[x];
             index -= 1;
