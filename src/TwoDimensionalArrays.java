@@ -2,6 +2,9 @@ public class TwoDimensionalArrays {
     public static void main(String[] args) {
         int[][] array2D = new int[3][4];
         int[][] array2DSequel = {{1,2}, {3,4,5}};
+        int[][] array3 = {{1,2,3}, {4,5,6}};
+
+     //   method(array3[0]);
 
         array2D[0][0] = 5;
 
@@ -12,4 +15,8 @@ public class TwoDimensionalArrays {
             System.out.println();
         }
     }
+    //method for one row
+//    public static int[][] method(int a[]){
+//
+//    }
 }
